@@ -1,4 +1,4 @@
-# 💸 Expense Tracker – Finanzas Personales con Streamlit
+# 💸 Expense Tracker – Finanzas Personales
 
 **Expense Tracker** es una aplicación web construida con **Streamlit** para ayudarte a gestionar tus finanzas personales de forma visual e interactiva. Con esta app puedes registrar tus gastos, administrar presupuestos por categoría, analizar tus hábitos de consumo y exportar tus datos, todo desde una interfaz intuitiva y responsiva.
 
