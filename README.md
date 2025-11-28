@@ -1,56 +1,74 @@
-# Expense Tracker
+# 💸 Expense Tracker – Finanzas Personales con Streamlit
 
-## Overview
+**Expense Tracker** es una aplicación web construida con **Streamlit** para ayudarte a gestionar tus finanzas personales de forma visual e interactiva. Con esta app puedes registrar tus gastos, administrar presupuestos por categoría, analizar tus hábitos de consumo y exportar tus datos, todo desde una interfaz intuitiva y responsiva.
 
-This is a personal finance management application built with Streamlit that allows users to track expenses, manage budgets, and analyze spending patterns. The application provides a web-based interface for recording financial transactions, setting category-based budgets, and visualizing spending data through interactive charts and dashboards.
+---
 
-## User Preferences
+## 🖼️ Vistas Previas
 
-Preferred communication style: Simple, everyday language.
+| Dashboard 📊 | Agregar Gasto ➕ | Presupuesto 💰 |
+|-------------|------------------|----------------|
+| ![Dashboard](https://github.com/frontenddeveloper2025dev/GastoTrack/blob/main/Expense%20Tracker%20%201.png) | ![Add Expense](https://github.com/frontenddeveloper2025dev/GastoTrack/blob/main/Expense%20Tracker%20%202.png) | ![Budget](https://github.com/frontenddeveloper2025dev/GastoTrack/blob/main/Expense%20Tracker%20%203.png) |
 
-## System Architecture
+| Análisis 📈 | Exportar Datos 📥 |
+|-------------|-------------------|
+| ![Analytics](https://github.com/frontenddeveloper2025dev/GastoTrack/blob/main/Expense%20Tracker%204%20.png) | ![Export](https://github.com/frontenddeveloper2025dev/GastoTrack/blob/main/Expense%20Tracker%20%205.png) |
 
-### Frontend Architecture
-- **Framework**: Streamlit web framework for rapid development of data applications
-- **Layout**: Wide layout with expandable sidebar for navigation
-- **Visualization**: Plotly Express and Plotly Graph Objects for interactive charts, Matplotlib for static plots
-- **Navigation**: Multi-page application with sidebar-based page selection
-- **Pages**: Dashboard, Add Expense, Manage Expenses, Budget Management, Analytics, Export Data
+---
 
-### Backend Architecture
-- **Database Layer**: SQLite database with dedicated database module for data persistence
-- **Data Models**: Two main entities - expenses and budgets
-- **Business Logic**: Utility functions for currency formatting, date range calculations, and budget status analysis
-- **Session Management**: Streamlit session state for managing application state and refresh triggers
+## 🚀 Características Principales
 
-### Data Storage
-- **Database**: SQLite local database (`expenses.db`)
-- **Expenses Table**: Stores transaction records with description, amount, category, date, notes, and timestamps
-- **Budgets Table**: Stores budget limits per category with period-based budgeting (monthly default)
-- **Data Processing**: Pandas DataFrames for data manipulation and analysis
+- Registro rápido de gastos
+- Presupuestos mensuales por categoría
+- Análisis visual de tus gastos (gráficas interactivas)
+- Filtros por fecha, categoría y monto
+- Exportación de datos en CSV
+- Interfaz intuitiva con navegación lateral
 
-### Key Design Patterns
-- **Modular Architecture**: Separation of concerns with dedicated modules for database operations, utilities, and main application logic
-- **Configuration Management**: Centralized page configuration with custom styling and layout settings
-- **Error Handling**: Input validation for expense entries with proper error messaging
-- **State Management**: Session-based state tracking for UI refresh and data consistency
+---
 
-## External Dependencies
+## 🧠 Arquitectura del Proyecto
 
-### Python Libraries
-- **streamlit**: Web application framework
-- **pandas**: Data manipulation and analysis
-- **matplotlib**: Static plotting library
-- **plotly**: Interactive visualization library (plotly.express and plotly.graph_objects)
-- **sqlite3**: Database connectivity (built-in Python library)
-- **datetime**: Date and time handling (built-in Python library)
-- **numpy**: Numerical computing support
-- **calendar**: Calendar-related utilities (built-in Python library)
+### 🔹 Frontend (UI)
 
-### Database
-- **SQLite**: Local file-based database for data persistence
-- **No external database server required**: Self-contained database solution
+- **Framework:** [Streamlit](https://streamlit.io/)
+- **Diseño:** Layout amplio con navegación lateral
+- **Visualizaciones:** Plotly Express, Plotly Graph Objects y Matplotlib
+- **Páginas:** 
+  - Dashboard
+  - Agregar Gasto
+  - Gestionar Gastos
+  - Presupuestos
+  - Análisis
+  - Exportar Datos
 
-### Development Environment
-- **Python 3.x**: Runtime environment
-- **No external APIs**: Fully self-contained application without third-party service dependencies
+### 🔹 Backend (Lógica y Datos)
+
+- **Base de datos:** SQLite (`expenses.db`)
+- **Tablas:**
+  - `expenses`: descripción, monto, categoría, fecha, notas
+  - `budgets`: categoría, límite, período (por defecto mensual)
+- **Gestión de estado:** `st.session_state` para sincronización de datos
+- **Procesamiento:** `pandas` para manipulación de datos
+
+---
+
+## 🧱 Patrón de Diseño
+
+- Arquitectura modular: componentes separados por lógica, visualización y base de datos
+- Manejo de errores y validaciones
+- Estilos y configuración centralizados
+- Flujo de estado consistente y reactivo
+
+---
+
+## 🧩 Dependencias
+
+Instálalas con `pip install -r requirements.txt`:
+
+```text
+streamlit
+pandas
+matplotlib
+plotly
+numpy
